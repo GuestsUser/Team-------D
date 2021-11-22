@@ -93,7 +93,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 0.15, z: 0.15}
+  m_Size: {x: 1.15, y: 1.15, z: 1.15}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8366979988907954821
 MonoBehaviour:
@@ -109,7 +109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   clip: {fileID: 8300000, guid: 63ed140f82bc222459d71fc4a25061cb, type: 3}
-  fls: {fileID: 3622482558732720386, guid: e6db49683add62341b42dfcc551ea03e, type: 3}
 --- !u!54 &9029856193674687108
 Rigidbody:
   m_ObjectHideFlags: 0
