@@ -14,6 +14,9 @@ public class MoveGround3 : MonoBehaviour
     //x,zは0から180のmoveに掛ける為の値が入れられている
 
     bool[] use_flg_xz = { false, false };//x,zの入力コルーチン使用フラグ、こういうのが出るのは構造がおかしいかもしれないが
+
+    WaitForSeconds wait= new WaitForSeconds(1f/60f);
+
     // Start is called before the first frame update
     void Start()
     {

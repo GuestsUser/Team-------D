@@ -11,7 +11,9 @@ class clear : MonoBehaviour
     Transform myTransform;
     bool clearsound = false;
     private float step_time = 0;
-    
+    public ParticleSystem fan;
+    private const int DISPLAY_FRAME = 600;
+    private int displayFrame = DISPLAY_FRAME;
 
     void Start()
     {
@@ -22,10 +24,11 @@ class clear : MonoBehaviour
 
     void Update()
     {
+
         if (myTransform.childCount == 0)
             
         {
-           
+
             if (Input.GetKeyDown("joystick button 2"))
             {
                 SceneManager.LoadScene("result");
@@ -37,13 +40,18 @@ class clear : MonoBehaviour
                 Time.timeScale = 0f;
                 audioSource.Play();
                 clearsound = true;
-                
-                
+                //Particle();
+                if (--displayFrame >= 0) {
+                    Debug.Log("おめでと");
+                    fan.Simulate(Time.unscaledDeltaTime, true, false);
+                }
                 clearUI.SetActive(false);
                 Time.timeScale = 0f;
-            }
-           
-
+            }           
         }
     }
+
+    //void Particle()
+    //{
+    //}
 }
