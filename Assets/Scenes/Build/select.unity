@@ -262,7 +262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 03 kari
+  m_Text: Test Stage 03 kari
 --- !u!222 &37311097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage01
+  m_Text: Test Stage01
 --- !u!222 &361197335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.6
-  m_Text: Stage 02 kari
+  m_Text: test Stage 02 kari
 --- !u!222 &1540438831
 CanvasRenderer:
   m_ObjectHideFlags: 0
