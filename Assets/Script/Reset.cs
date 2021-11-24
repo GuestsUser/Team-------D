@@ -12,9 +12,14 @@ public class Reset : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameMain");
     }
+    public void select()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("select");
+    }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         //Time.timeScale = 1f;
     }
