@@ -15,8 +15,6 @@ public class MoveGround3 : MonoBehaviour
 
     bool[] use_flg_xz = { false, false };//x,zの入力コルーチン使用フラグ、こういうのが出るのは構造がおかしいかもしれないが
 
-    WaitForSeconds wait= new WaitForSeconds(1f/60f);
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +54,7 @@ public class MoveGround3 : MonoBehaviour
                 if (val[0] > 0) { val[0] -= add; }
                 else { val[0] = 0; }
             }
-            yield return null;
+            yield return StartCoroutine("TimeStop");
         }
         if (xz==0) { use_flg_xz[0] = false; }//フラグのオンオフ
         else { use_flg_xz[1] = false; }
@@ -66,7 +64,7 @@ public class MoveGround3 : MonoBehaviour
             if (val[1] != 0|| val[0]>=180 || val[0]<=0) { break; }//入力があった場合若しくは角度サイズが大小問わず30以上になった時点で終了
             add -= (90 / accel) / back;
             val[0] += add * code;
-            yield return null;
+            yield return StartCoroutine("TimeStop");
         }
         StartCoroutine(BackMove(val));
     }
@@ -81,7 +79,13 @@ public class MoveGround3 : MonoBehaviour
             if (code > 0 && val[0] >= 90) { val[0] = 90; break; }
             if (code < 0 && val[0] <= 90) { val[0] = 90; break; }
 
-            yield return null;
+            yield return StartCoroutine("TimeStop");
         }
+    }
+
+    //WaitFor系を使うと凄く遅くなったのが気に食わなかったのでtimescaleが0なら足止めする感じの関数を完了するまで止める風に実装
+    IEnumerator TimeStop()
+    {
+        do { yield return null; } while (Time.timeScale == 0);
     }
 }
