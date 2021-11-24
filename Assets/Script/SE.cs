@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SE: MonoBehaviour
 {
-    private void Awake()
-    {
-       
-    }
+   
     // Use this for initialization
     void Start()
     {
