@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 61958928}
   - component: {fileID: 61958927}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5890,7 +5890,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 0.9031477, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6565,7 +6565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Asset: {fileID: -944628639613478452, guid: b012979a2055b0843b9106ec6d301868, type: 3}
   m_ActionId: 39d12222-fa19-4dda-8f4c-0e91d8a8a4a3
---- !u!1001 &828594972
+--- !u!1001 &849801364
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6629,8 +6629,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637842661187513561, guid: aca418b5af192c148991f0b5691c80bb,
         type: 3}
+      propertyPath: ShapeModule.angle
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637842661187513561, guid: aca418b5af192c148991f0b5691c80bb,
+        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 3637842661187513563, guid: aca418b5af192c148991f0b5691c80bb,
         type: 3}
@@ -6870,12 +6875,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
---- !u!198 &984010564 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3637842661187513561, guid: aca418b5af192c148991f0b5691c80bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 828594972}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1016287690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7293,6 +7292,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332220218}
   m_CullTransparentMesh: 0
+--- !u!198 &1425077283 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3637842661187513561, guid: aca418b5af192c148991f0b5691c80bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 849801364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1540438828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7433,7 +7438,7 @@ MonoBehaviour:
   clearSound: {fileID: 8300000, guid: a752a7e649cd67d40b224499a883f640, type: 3}
   clearUI: {fileID: 861949619}
   gameClearMessage: {fileID: 1122644701}
-  particle: {fileID: 984010564}
+  particle: {fileID: 1425077283}
 --- !u!82 &1598394169
 AudioSource:
   m_ObjectHideFlags: 0
