@@ -42,7 +42,7 @@ class clear : MonoBehaviour
                 clearsound = true;
                 //Particle();
                 if (--displayFrame >= 0) {
-                    Debug.Log("おめでと");
+                   Debug.Log("おめでと");
                     fan.Simulate(Time.unscaledDeltaTime, true, false);
                 }
                 clearUI.SetActive(false);
