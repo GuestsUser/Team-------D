@@ -7,19 +7,19 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Build/Title.unity
-    guid: eb703867323ab1343a62d16f3dc57d66
+    guid: 98cfee7175c90f74bb700392c2e9c686
   - enabled: 1
     path: Assets/Scenes/Build/select.unity
     guid: 4be0665a0386aee4ba669ade65bd200f
   - enabled: 1
     path: Assets/Scenes/Build/GameMain.unity
-    guid: e9f10331164ecf945a62eee07d706ace
+    guid: 95595811113a8424f8a7ade916028e85
   - enabled: 1
     path: Assets/Scenes/Build/result.unity
-    guid: 9d61d1dfd05caf845bc690b461fb4888
+    guid: 67d8d750f6d13b6469cb1b3b457d17a9
   - enabled: 1
     path: Assets/Scenes/Build/retry.unity
-    guid: c6fe2046d1bd1494c8833fbc0bab6594
+    guid: 580075bdee9fa004ba5e0092933edcf8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7b3ec79b5e0dcff45a28dcef01c03d00,
       type: 2}
