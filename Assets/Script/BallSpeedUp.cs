@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BallSpeedUp : MonoBehaviour
 {
-    [SerializeField] private int limit; //ボールが早くなっている時間 
+    [SerializeField] private int limit=450; //ボールが早くなっている時間 
 
     [SerializeField] private Material speedcolor;   //早くなっているときのボールの色
 
-    [SerializeField] private int blinking;   //点滅し始める時間
+    [SerializeField] private int blinking=330;   //点滅し始める時間
 
-    [SerializeField] private int tenmetu;    //点滅する間隔
+    [SerializeField] private int tenmetu=5;    //点滅する間隔
     // Start is called before the first frame update
     void Start()
     {
