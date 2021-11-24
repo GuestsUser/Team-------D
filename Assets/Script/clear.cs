@@ -11,9 +11,9 @@ class clear : MonoBehaviour
     Transform myTransform;
     bool clearsound = false;
     private float step_time = 0;
-    public ParticleSystem fan;
-    private const int DISPLAY_FRAME = 600;
-    private int displayFrame = DISPLAY_FRAME;
+    public ParticleSystem particle;
+    private const int PARTICLE_LIMIT = 600;
+    private int particle_limit = 0;
 
     void Start()
     {
@@ -40,18 +40,17 @@ class clear : MonoBehaviour
                 Time.timeScale = 0f;
                 audioSource.Play();
                 clearsound = true;
-                //Particle();
-                if (--displayFrame >= 0) {
-                    Debug.Log("おめでと");
-                    fan.Simulate(Time.unscaledDeltaTime, true, false);
-                }
+
                 clearUI.SetActive(false);
                 Time.timeScale = 0f;
-            }           
+            }
+            particle_limit++;
+            if(particle_limit > 0 && particle_limit <= PARTICLE_LIMIT)
+            {
+                Debug.Log("おめでと");
+                particle.Simulate(Time.unscaledDeltaTime, true, false);
+            }
         }
     }
 
-    //void Particle()
-    //{
-    //}
 }
