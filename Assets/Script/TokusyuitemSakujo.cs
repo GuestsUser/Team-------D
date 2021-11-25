@@ -10,7 +10,7 @@ public class TokusyuitemSakujo : MonoBehaviour
 {
     private void OnTriggerEnter(Collider hit)
     {
-       // gameObject.GetComponent<Ballspeedx2>();
+       //gameObject.GetComponent<Ballspeedx2>();
 
         if (hit.CompareTag("Ball")){
              Destroy(gameObject);
