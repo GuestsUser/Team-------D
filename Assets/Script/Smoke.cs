@@ -13,7 +13,7 @@ public class Smoke : MonoBehaviour
 
         //unitychanの情報を取得
         this.player = GameObject.Find("Sphere");
-
+        transform.position = player.transform.position;
         // MainCamera(自分自身)とplayerとの相対距離を求める
         offset = transform.position - player.transform.position;
 
