@@ -7,10 +7,15 @@ using UnityEngine.SceneManagement;
 public class Reset : MonoBehaviour
 {
    
-    public void replay()
+    public void replay(int num)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("GameMain");
+        switch (num)
+        {
+            case 0: SceneManager.LoadScene("GameMain"); break;
+            case 1: SceneManager.LoadScene("Stage2"); break;
+        }
+        
     }
     public void select()
     {

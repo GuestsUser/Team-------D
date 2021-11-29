@@ -27,7 +27,9 @@ public class Timer : MonoBehaviour
 
     IEnumerator CountdownCoroutine()
     {
-
+        GameObject inputObj = GameObject.Find("UI_pause");
+        UI_pause inputScript = inputObj.GetComponent<UI_pause>();
+        inputScript.enabled = false;
         _textCountdown.gameObject.SetActive(true);
 
         _textCountdown.text = "";
@@ -48,6 +50,7 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         _textCountdown.text = "";
+        inputScript.enabled = true;
         Time.timeScale = 1f;
         _textCountdown.gameObject.SetActive(false);
         _textTimer.gameObject.SetActive(true);
