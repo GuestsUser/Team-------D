@@ -5,15 +5,24 @@ using UnityEngine;
 public class EffectTrigger : MonoBehaviour
 {
     [SerializeField] private ParticleSystem smoke; //smokeに床に接地したら起動したいパーティクルを入れてOnTriggerEnterで起動する奴
+    private bool flg = false;
 
     void Start()
     {
-        smoke.gameObject.SetActive(false);
+        
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     void OnCollisionStay(Collision hit)
     {
-        if (hit.gameObject.tag=="Ground") {
+        if (hit.gameObject.tag=="Ground" && flg == false) {
             smoke.gameObject.SetActive(true);
+            flg = false;
         }
     }
 }

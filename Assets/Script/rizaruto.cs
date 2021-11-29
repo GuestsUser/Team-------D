@@ -14,7 +14,7 @@ public class rizaruto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 2"))
+        if (Input.GetKeyDown("joystick button 0"))
         {
             SceneManager.LoadScene("retry");
         }
