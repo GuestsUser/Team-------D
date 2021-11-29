@@ -29,14 +29,14 @@ class clear : MonoBehaviour
             
         {
 
-            if (Input.GetKeyDown("joystick button 2"))
+            if (Input.GetKeyDown("joystick button 0"))
             {
                 SceneManager.LoadScene("result");
             }
 
             if (!clearsound)
             {
-                gameClearMessage.text = "Game Clear!  Xキーを押してください"; // 追加
+                gameClearMessage.text = "Game Clear!  Aキーを押してください"; // 追加
                 Time.timeScale = 0f;
                 audioSource.Play();
                 clearsound = true;
@@ -47,7 +47,6 @@ class clear : MonoBehaviour
             particle_limit++;
             if(particle_limit > 0 && particle_limit <= PARTICLE_LIMIT)
             {
-                Debug.Log("おめでと");
                 particle.Simulate(Time.unscaledDeltaTime, true, false);
             }
         }
