@@ -1865,8 +1865,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 413457127}
-        m_MethodName: replay
+      - m_Target: {fileID: 413457129}
+        m_MethodName: replay01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
