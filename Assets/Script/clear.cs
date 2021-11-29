@@ -47,7 +47,6 @@ class clear : MonoBehaviour
             particle_limit++;
             if(particle_limit > 0 && particle_limit <= PARTICLE_LIMIT)
             {
-                Debug.Log("おめでと");
                 particle.Simulate(Time.unscaledDeltaTime, true, false);
             }
         }

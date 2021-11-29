@@ -6,12 +6,19 @@ public class Sparks : MonoBehaviour
 {
     public ParticleSystem spk;
     public ParticleSystem fls;
+    public AudioSource boundSE;
+
+    void Start()
+    {
+        boundSE = this.gameObject.GetComponent<AudioSource>();
+    }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Wall")
         {
             Spark(collision);
+            boundSE.Play();
         }
     }
 
