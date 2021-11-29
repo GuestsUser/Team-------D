@@ -22,6 +22,7 @@ public class Sparks : MonoBehaviour
             Flash(collider.gameObject);
         }
     }
+
     void Spark(Collision collision)
     {
         spk.transform.position = collision.contacts[0].point;

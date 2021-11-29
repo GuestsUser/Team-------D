@@ -5,7 +5,8 @@ using UnityEngine;
 public class EffectTrigger : MonoBehaviour
 {
     [SerializeField] private ParticleSystem smoke; //smokeに床に接地したら起動したいパーティクルを入れてOnTriggerEnterで起動する奴
-    private bool flg=true;
+    private bool flg = false;
+
     void Start()
     {
         
@@ -16,9 +17,10 @@ public class EffectTrigger : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision hit)
+
+    void OnCollisionStay(Collision hit)
     {
-        if (hit.gameObject.tag=="Ground"&&flg) {
+        if (hit.gameObject.tag=="Ground" && flg == false) {
             smoke.gameObject.SetActive(true);
             flg = false;
         }
