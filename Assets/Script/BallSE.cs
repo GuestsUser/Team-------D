@@ -35,8 +35,12 @@ public class BallSE : MonoBehaviour
         else
         {
             while (volume >= 0) {
-                volume--;
+                volume = volume - 0.01f; ;
             }
+        }
+        if(volume < 0)
+        {
+            volume = 0;
         }
     }
 }
