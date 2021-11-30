@@ -17,6 +17,8 @@ public class BallSpeedDown : MonoBehaviour
     IEnumerator sbdw;
 
     bool check = false;     //コルーチンが実行されているかいないかをチェック
+
+    int elapsedtime =0 ;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,15 +37,25 @@ public class BallSpeedDown : MonoBehaviour
         {
             if (check)
             {
-                StopCoroutine(sbdw);
-                sbdw = null;
+                StopAllCoroutines();
+                //sbdw = null;
                 check = false;
-
+                elapsedtime = 0;
             }
         }
         if (other.CompareTag("Ojamamusi"))
         {
-            StartCoroutine(sbdw);
+            
+            if (check == false)
+            {
+                StartCoroutine("SpeedDown");
+
+            }
+            else
+            {
+                this.GetComponent<Renderer>().material = speedcolor;
+                elapsedtime = 0;
+            }
         }
     }
 
@@ -54,13 +66,13 @@ public class BallSpeedDown : MonoBehaviour
 
         this.GetComponent<Renderer>().material = speedcolor;
 
-        for (int i = 0; i < limit; i++)
+        for (elapsedtime = 0; elapsedtime < limit; elapsedtime++)
         {
-            if (i > blinking)
+            if (elapsedtime > blinking)
             {
-                if (i % tenmetu == 0)
+                if (elapsedtime % tenmetu == 0)
                 {
-                    if (i % 2 == 0)
+                    if (elapsedtime % 2 == 0)
                     {
                         this.GetComponent<Renderer>().material = nowcolor;
                     }
@@ -80,6 +92,8 @@ public class BallSpeedDown : MonoBehaviour
 
             yield return StartCoroutine("TimeStop");
         }
+        elapsedtime = 0;
+        check = false;
         Debug.Log("終了");
         this.GetComponent<Renderer>().material = nowcolor;
     }
