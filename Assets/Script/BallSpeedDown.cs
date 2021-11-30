@@ -11,10 +11,17 @@ public class BallSpeedDown : MonoBehaviour
     [SerializeField] private int blinking = 90;   //点滅し始める時間
 
     [SerializeField] private int tenmetu = 5;    //点滅する間隔
+
+    private Material nowcolor;
+
+    IEnumerator sbdw;
+
+    bool check = false;     //コルーチンが実行されているかいないかをチェック
     // Start is called before the first frame update
     void Start()
     {
-
+        sbdw = SpeedDown();
+        nowcolor = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -24,16 +31,26 @@ public class BallSpeedDown : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Tokusyuitem"))
+        {
+            if (check)
+            {
+                StopCoroutine(sbdw);
+                sbdw = null;
+                check = false;
+
+            }
+        }
         if (other.CompareTag("Ojamamusi"))
         {
-            StartCoroutine("SpeedDown");
+            StartCoroutine(sbdw);
         }
     }
 
     IEnumerator SpeedDown()
     {
-        Vector3 oldposition = transform.position;
-        Material nowcolor = GetComponent<Renderer>().material;
+        check = true;
+        Vector3 oldposition = transform.position;;
 
         this.GetComponent<Renderer>().material = speedcolor;
 
