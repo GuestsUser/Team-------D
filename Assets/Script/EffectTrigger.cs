@@ -5,6 +5,7 @@ using UnityEngine;
 public class EffectTrigger : MonoBehaviour
 {
     [SerializeField] private ParticleSystem smoke; //smokeに床に接地したら起動したいパーティクルを入れてOnTriggerEnterで起動する奴
+    [SerializeField] private AudioSource sound;
     private bool flg = false;
 
     void Start()
@@ -22,6 +23,7 @@ public class EffectTrigger : MonoBehaviour
     {
         if (hit.gameObject.tag=="Ground" && flg == false) {
             smoke.gameObject.SetActive(true);
+            sound.gameObject.SetActive(true);
             flg = false;
         }
     }
