@@ -16,7 +16,7 @@ public class BallSpeedDown : MonoBehaviour
 
     IEnumerator sbdw;
 
-    bool check = false;     //コルーチンが実行されているかいないかをチェック
+    [HideInInspector] public bool check = false;     //コルーチンが実行されているかいないかをチェック
 
     int elapsedtime =0 ;
     // Start is called before the first frame update
@@ -68,6 +68,7 @@ public class BallSpeedDown : MonoBehaviour
 
         for (elapsedtime = 0; elapsedtime < limit; elapsedtime++)
         {
+            if (!check) { break; }//checkが外部からfalseにされた場合強制終了
             if (elapsedtime > blinking)
             {
                 if (elapsedtime % tenmetu == 0)

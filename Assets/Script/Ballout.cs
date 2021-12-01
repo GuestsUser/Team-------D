@@ -36,6 +36,9 @@ public class Ballout : MonoBehaviour
     void FixedUpdate(){}
     void PrefabCreate()
     {
+        ball.GetComponent<BallSpeedDown>().check = false;//再出発時には特殊アイテム効果無効化
+        ball.GetComponent<BallSpeedUp>().check = false;
+
         ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ball.transform.position = ini_position;
 
