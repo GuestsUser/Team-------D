@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6843273994735271519}
   - component: {fileID: 4985855192063934965}
   - component: {fileID: 2506996742369811002}
+  - component: {fileID: 9121332121755682508}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -91,7 +92,7 @@ MeshCollider:
   m_GameObject: {fileID: 6843273994735271518}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
@@ -127,3 +128,16 @@ MonoBehaviour:
   move: 30
   accel: 90
   back: 60
+--- !u!65 &9121332121755682508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843273994735271518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 3, z: 10}
+  m_Center: {x: 0, y: -1.5, z: 0}
