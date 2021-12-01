@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/Stage2.unity
     guid: 9e0173242b70b3140bf7b89d0a8f25c0
+  - enabled: 1
+    path: Assets/Scenes/Build/result2.unity
+    guid: e5f55978faf3d244d9dbf248af90af8c
+  - enabled: 1
+    path: Assets/Scenes/Build/retry2.unity
+    guid: 3d3c072f7d1c7d849998f7e1cdc23c0d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7b3ec79b5e0dcff45a28dcef01c03d00,
       type: 2}

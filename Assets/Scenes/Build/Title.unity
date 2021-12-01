@@ -603,7 +603,7 @@ MonoBehaviour:
     type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7184698166905980337, guid: b012979a2055b0843b9106ec6d301868,
     type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
 --- !u!114 &742712793
 MonoBehaviour:

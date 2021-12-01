@@ -23,4 +23,5 @@ public class TitleGo : MonoBehaviour
         SceneManager.LoadScene("GameMain");
         Time.timeScale = 1f;
     }
+   
 }
