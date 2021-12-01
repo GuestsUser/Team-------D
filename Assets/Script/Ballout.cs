@@ -39,6 +39,8 @@ public class Ballout : MonoBehaviour
         ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ball.transform.position = ini_position;
 
+        ball.GetComponent<EffectTrigger>().GetUseParticle().gameObject.SetActive(false);//砂ぼこりとSEの無効化
+        ball.GetComponent<EffectTrigger>().GetUseSound().gameObject.SetActive(false);
     }
 
 
