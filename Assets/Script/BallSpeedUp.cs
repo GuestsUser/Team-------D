@@ -19,6 +19,7 @@ public class BallSpeedUp : MonoBehaviour
 
     bool check=false;     //コルーチンが実行されているかいないかをチェック
 
+    int elapsedtime=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,17 +39,28 @@ public class BallSpeedUp : MonoBehaviour
         {
             if (check)
             {
-                StopCoroutine(sbup);
-                sbup = null;
+                StopAllCoroutines();
+                //sbup = null;
                 check = false;
+                elapsedtime = 0;
             }
             
         }
         if (other.CompareTag("Tokusyuitem"))
         {
-            StartCoroutine(sbup);
 
+            if (check == false)
+            {
+                StartCoroutine("Speedup");
+
+            }
+            else
+            {
+                this.GetComponent<Renderer>().material = speedcolor;
+                elapsedtime = 0;
+            }
         }
+        
     }
 
     IEnumerator Speedup()
@@ -58,13 +70,13 @@ public class BallSpeedUp : MonoBehaviour
 
         this.GetComponent<Renderer>().material = speedcolor;
 
-        for (int i = 0; i < limit; i++)
+        for ( elapsedtime = 0; elapsedtime < limit; elapsedtime++)
         {
-            if (i > blinking)
+            if (elapsedtime > blinking)
             {
-                if (i % tenmetu == 0)
+                if (elapsedtime % tenmetu == 0)
                 {
-                    if (i % 2 == 0)
+                    if (elapsedtime % 2 == 0)
                     {
                         this.GetComponent<Renderer>().material = nowcolor;
                     }
@@ -84,6 +96,7 @@ public class BallSpeedUp : MonoBehaviour
 
             yield return StartCoroutine("TimeStop");
         }
+        elapsedtime = 0;
         Debug.Log("終了");
         check = false;
         this.GetComponent<Renderer>().material = nowcolor;
