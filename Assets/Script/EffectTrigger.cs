@@ -19,11 +19,13 @@ public class EffectTrigger : MonoBehaviour
         
     }
 
-    void OnCollisionStay(Collision hit)
+    void OnCollisionEnter(Collision hit)
     {
-        if (hit.gameObject.tag=="Ground" && flg == false) {
+        if (hit.gameObject.tag == "Ground" && flg == false)
+        {
             smoke.gameObject.SetActive(true);
             sound.gameObject.SetActive(true);
+            smoke.Play(true);
             flg = false;
         }
     }
@@ -33,6 +35,7 @@ public class EffectTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             sound.gameObject.SetActive(false);
+            smoke.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
     }
 
