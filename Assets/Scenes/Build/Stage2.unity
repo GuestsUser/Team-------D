@@ -1901,8 +1901,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1889952, y: 1}
-    m_SensorSize: {x: 1.1674641, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1918,7 +1917,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410910078}
-  m_LocalRotation: {x: -0.63089055, y: -0.00000005673728, z: -0.000000046135217, w: 0.7758719}
   m_LocalRotation: {x: -0.63089055, y: 0.00000009827184, z: 0.000000079908524, w: 0.7758719}
   m_LocalPosition: {x: 0, y: 15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1936,27 +1934,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 410910078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba22344762941e44af44bb6ba6364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CollideAgainst:
+  sphere: {fileID: 1592641580}
+  hit_layer:
     serializedVersion: 2
     m_Bits: 1
-  m_IgnoreTag: Ball
-  m_TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
-  m_AvoidObstacles: 1
-  m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0
-  m_Strategy: 2
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 5
-  m_DampingWhenOccluded: 3
-  m_OptimalTargetDistance: 0
+  fade_in: 18
+  fade_out: 6
+  min_alpha: 128
 --- !u!1 &413457126
 GameObject:
   m_ObjectHideFlags: 0
@@ -6791,6 +6778,7 @@ MonoBehaviour:
   speedcolor: {fileID: 2100000, guid: bdf005b86968b8d439d809853257a501, type: 2}
   blinking: 330
   tenmetu: 5
+  check: 0
 --- !u!114 &1592641582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,6 +6795,7 @@ MonoBehaviour:
   speedcolor: {fileID: 2100000, guid: 2554026db6c11d646825326fe475e9e2, type: 2}
   blinking: 90
   tenmetu: 5
+  check: 0
 --- !u!82 &1592641590
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9278,7 +9267,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027158506}
-  m_LocalRotation: {x: -0.63089055, y: -0.00000005673728, z: -0.000000046135217, w: 0.7758719}
   m_LocalRotation: {x: -0.63089055, y: 0.00000009827184, z: 0.000000079908524, w: 0.7758719}
   m_LocalPosition: {x: 0, y: 15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
