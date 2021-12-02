@@ -27,6 +27,15 @@ public class EffectTrigger : MonoBehaviour
             flg = false;
         }
     }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            sound.gameObject.SetActive(false);
+        }
+    }
+
     //落下復帰後のパーティクルやSEリセットはBalloutに入ってる
     public ParticleSystem GetUseParticle() { return smoke; }//この関数で使ってる奴を取り出す事でBalloutの方に新しくインスペクターで受け取るsmokeを用意しなくて済む
     public AudioSource GetUseSound() { return sound; }
