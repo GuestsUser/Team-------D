@@ -1850,6 +1850,7 @@ GameObject:
   - component: {fileID: 410910081}
   - component: {fileID: 410910080}
   - component: {fileID: 410910079}
+  - component: {fileID: 410910082}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1900,7 +1901,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.069378, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1924,6 +1925,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &410910082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410910078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba22344762941e44af44bb6ba6364a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphere: {fileID: 1592641580}
+  hit_layer:
+    serializedVersion: 2
+    m_Bits: 1
+  fade_in: 18
+  fade_out: 6
+  min_alpha: 128
 --- !u!1 &413457126
 GameObject:
   m_ObjectHideFlags: 0
