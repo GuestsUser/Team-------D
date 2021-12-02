@@ -1271,7 +1271,6 @@ GameObject:
   - component: {fileID: 410910081}
   - component: {fileID: 410910080}
   - component: {fileID: 410910079}
-  - component: {fileID: 410910082}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1322,7 +1321,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1674641, y: 1}
+    m_SensorSize: {x: 1.069378, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1346,36 +1345,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
---- !u!114 &410910082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410910078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  m_IgnoreTag: Ball
-  m_TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
-  m_AvoidObstacles: 1
-  m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0
-  m_Strategy: 2
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 5
-  m_DampingWhenOccluded: 3
-  m_OptimalTargetDistance: 0
 --- !u!1 &413457126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,8 +3177,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.6, y: 41}
-  m_SizeDelta: {x: 175.1, y: 29.8}
+  m_AnchoredPosition: {x: -37.5, y: 39.5}
+  m_SizeDelta: {x: 187.2, y: 30.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332220220
 MonoBehaviour:
@@ -3502,6 +3471,7 @@ MonoBehaviour:
   speedcolor: {fileID: 2100000, guid: bdf005b86968b8d439d809853257a501, type: 2}
   blinking: 330
   tenmetu: 5
+  check: 0
 --- !u!114 &1592641582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3518,6 +3488,7 @@ MonoBehaviour:
   speedcolor: {fileID: 2100000, guid: 2554026db6c11d646825326fe475e9e2, type: 2}
   blinking: 90
   tenmetu: 5
+  check: 0
 --- !u!82 &1592641590
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3901,8 +3872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.9, y: -7.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -43.6, y: -6.8}
+  m_SizeDelta: {x: 208, y: 36.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661889068
 MonoBehaviour:
@@ -5187,8 +5158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 144.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -10.5, y: 136.7}
+  m_SizeDelta: {x: 251.7, y: 61.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119351622
 MonoBehaviour:
@@ -5212,7 +5183,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -5382,6 +5353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738335842632757929, guid: 04942f880bb71b54795357f90c88727b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4738335842632757941, guid: 04942f880bb71b54795357f90c88727b,
         type: 3}
