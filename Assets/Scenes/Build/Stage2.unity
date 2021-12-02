@@ -1901,7 +1901,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.069378, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1937,13 +1937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba22344762941e44af44bb6ba6364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 1592641580}
-  hit_layer:
-    serializedVersion: 2
-    m_Bits: 1
-  fade_in: 18
-  fade_out: 6
-  min_alpha: 128
 --- !u!1 &413457126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,7 +3277,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c1d00e67f3d7bd040b1bb3f272679f27, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
