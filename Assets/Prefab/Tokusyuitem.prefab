@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5395251130918793834}
   - component: {fileID: 1441507112956048206}
   - component: {fileID: 4924809617999178114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tokusyuitem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
