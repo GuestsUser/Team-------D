@@ -2357,7 +2357,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.069378, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2393,6 +2393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba22344762941e44af44bb6ba6364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sphere: {fileID: 0}
+  hit_layer:
+    serializedVersion: 2
+    m_Bits: 0
+  fade_in: 0
+  fade_out: 0
+  min_alpha: 0
 --- !u!1 &413457126
 GameObject:
   m_ObjectHideFlags: 0
@@ -11331,7 +11338,7 @@ PrefabInstance:
     - target: {fileID: 6212250473415875052, guid: 82de53906e174b34099122330e28d4a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6212250473415875052, guid: 82de53906e174b34099122330e28d4a2,
         type: 3}
